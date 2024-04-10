@@ -1,0 +1,43 @@
+.main-products {
+    background-color: #eeeeee;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 98%;
+    gap: 10px;
+}
+.main-product {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.main-product p {
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.main-product img {
+    width: 50%;
+}
+.main-product span {
+    width: 100%;
+    text-align: center;
+}
+
+.main-product span,
+p {
+    color: #9a9a9a;
+}
+
+@media screen and (max-width: 768px) {
+    .main-products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .main-product img {
+        width: 70%;
+    }
+}
