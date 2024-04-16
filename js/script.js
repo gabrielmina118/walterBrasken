@@ -12,6 +12,7 @@ loadComponent("./info.html", "info-component");
 
 loadComponent("./products.html", "info-produtcs");
 loadComponent("./footer.html", "info-footer");
+loadComponent("./blog.html", "info-blog");
 
 function menuShow() {
     let menuMobile = document.querySelector(".mobile-menu");
@@ -23,3 +24,24 @@ function menuShow() {
         document.querySelector(".icon").src = "./img/close_white_36dp.svg";
     }
 }
+
+function changeBlog() {
+    let infoComponent = document.querySelector("#info-component");
+    let infoProduct = document.querySelector("#info-produtcs");
+    let infoBlog = document.querySelector("#info-blog");
+
+    infoComponent.style.display = "none";
+    infoProduct.style.display = "none";
+    infoBlog.style.display = "block";
+}
+
+function backIndex() {
+    let infoComponent = document.querySelector("#info-component");
+    let infoProduct = document.querySelector("#info-produtcs");
+    let infoBlog = document.querySelector("#info-blog");
+
+    infoComponent.style.display = "block";
+    infoProduct.style.display = "block";
+    infoBlog.style.display = "none";
+}
+
