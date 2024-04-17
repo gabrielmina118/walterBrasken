@@ -58,19 +58,34 @@
     margin: 0 15px;
     transition: filter 0.3s;
 }
-.nav-item a :hover {
-    filter: brightness(0.8);
-    color: #00033d;
-    cursor: pointer;
-}
 
 .nav-link {
     text-decoration: none;
     font-size: 1.15rem;
     color: #000;
     font-weight: 400;
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+    transition: color 0.3s; /* Efeito de transição da cor do texto */
+    cursor: pointer;
+}
+.nav-link:hover {
+    color: #9f01f4;
 }
 
+.nav-link::after {
+    content: ""; /* O conteúdo do pseudo-elemento, neste caso, nada */
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Posicionamento do underscore */
+    width: 0;
+    height: 2px; /* Tamanho do underscore */
+    background-color: #9f01f4; /* Cor do underscore */
+    transition: width 0.3s; /* Efeito de transição da largura do underscore */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Quando houver hover, o underscore se expande */
+}
 .login-button button {
     border: none;
     padding: 10px 15px;
