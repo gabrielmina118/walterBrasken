@@ -2,6 +2,10 @@ body {
     height: 100vh;
 }
 
-#info-blog{
+#info-blog,
+#info-product-filter,
+#info-acessories,
+#info-location,
+#info-contact {
     display: none;
 }
