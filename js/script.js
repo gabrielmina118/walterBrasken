@@ -13,7 +13,6 @@ loadComponent("./info.html", "info-component");
 loadComponent("./products.html", "info-produtcs");
 loadComponent("./blog.html", "info-blog");
 loadComponent("./productsFilter.html", "info-product-filter");
-loadComponent("./acessories.html", "info-acessories");
 loadComponent("./location.html", "info-location");
 loadComponent("./contact.html", "info-contact");
 
@@ -53,12 +52,11 @@ function backIndex() {
 const allInfoDivs = document.querySelectorAll(".info-div");
 let currentPage = 0;
 
-function showPage(pageNumber){
-    if(pageNumber >= 0 && pageNumber < allInfoDivs.length){
-        allInfoDivs.forEach((div , index)=>{
-            console.log(index === pageNumber , index , pageNumber);
+function showPage(pageNumber) {
+    if (pageNumber >= 0 && pageNumber < allInfoDivs.length) {
+        allInfoDivs.forEach((div, index) => {
             div.style.display = index === pageNumber ? "block" : "none";
-        })
-         currentPage = pageNumber;
+        });
+        currentPage = pageNumber;
     }
 }
